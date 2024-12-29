@@ -1,3 +1,3 @@
 streamlit==1.38.0
 # local  tinytroupe
--e git+https://github.com/microsoft/TinyTroupe.git
+-e git+https://github.com/microsoft/TinyTroupe.git#egg=tinytroupe
