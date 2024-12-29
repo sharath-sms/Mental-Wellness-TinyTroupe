@@ -62,7 +62,7 @@ def run_tinyworld_with_prompt(tiny_world: TinyWorld, user_prompt: str):
     """
     tiny_world.broadcast(user_prompt)
 
-    _, tinyworld_responses = tiny_world.run(1, return_actions=True)
+    tinyworld_responses = tiny_world.run(1, return_actions=True)
 
     return tiny_world, tinyworld_responses
 

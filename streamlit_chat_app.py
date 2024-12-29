@@ -58,8 +58,9 @@ def main():
         with col3:
             user_nationality = st.text_input("What is your nationality")
 
-        st.write(f"Hello {user_name}! How do you want to proceed?")
-        help_option = st.radio("Choose an option", ["Chat with a virtual therapist", "Get advice from a tiny group of therapists"])
+    
+        help_option = st.radio(f"Hello {user_name}! How do you want to proceed?", ["Chat with a virtual therapist", "Seek advice from a group of virtual agents"],
+                               captions=["You can interact with a virtual therapist agent", "You can interact with a group of virtual agents, who also brainstorm within themselsves in a virtual world to help you."])
 
         if help_option == "Chat with a virtual therapist" and user_name and user_age and user_nationality:
             therapist_agent = create_therapist(nationality=user_nationality)
@@ -83,8 +84,9 @@ def main():
 
                 st.session_state.messages.append({"role": "assistant", "content": response_content})
 
-        elif help_option == "Get advice from a tiny group of therapists" and user_name and user_age and user_nationality:
-            traditional_methods = st.radio("Do you want to use traditional methods?", ("Yes", "No"))
+        elif help_option == "Seek advice from a group of virtual agents" and user_name and user_age and user_nationality:
+            traditional_methods = st.radio("Do you want to include expert agents who specialize in traditional methods?", ("Yes", "No"),
+                                           captions=["This would include Psychologist, Ayurvedic Expert, Tai Chi Expert, and Psychiatrist as agents", "This would only include Psychologist, Psychiatrist as agents"])
             use_traditional_methods = traditional_methods == "Yes"
 
             world = create_tiny_world(use_traditional_methods=use_traditional_methods)
