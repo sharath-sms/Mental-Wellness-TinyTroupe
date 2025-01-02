@@ -34,18 +34,3 @@ def set_background(image_file: str) -> None:
 
     st.markdown(css, unsafe_allow_html=True)
 
-
-# st.markdown(
-#     f"""
-#      <style>
-#      .stApp {{
-#          background: url(data:image/png;base64,{base64.b64encode(open("./assets/st_bg_img.png", "rb").read()).decode()});
-#          background-repeat: no-repeat;
-#          background-position: right 50% bottom 95%;
-#          background-size: contain;
-#          background-attachment: scroll;
-#      }}
-#      </style>
-#      """,
-#     unsafe_allow_html=True,
-# )
