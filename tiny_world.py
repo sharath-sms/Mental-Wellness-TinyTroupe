@@ -69,13 +69,14 @@ def run_tinyworld_with_prompt(tiny_world: TinyWorld, user_prompt: str):
 def consolidate_tinyworld_ideas(world: TinyWorld) -> dict:
     """Consolidate the latest ideas from each agent in the world."""
     agent_prompt = (
-        "Consolidate the latest ideas from you and also your perspective of the latest conversation in the group. "
-        "Note that you should only focus on the latest conversation in the group based on latest input. "
-        "Provide a lot of details on each idea, and complement anything missing. "
-        "First talk about your ideas and later about others' ideas. "
-        "Let the user know who suggested the idea and why. "
-        "Summarize the the ideas to the user that the group came up with, explaining each idea as an item of a list. "
-        "Always format your responses in Markdown format "
+        "Divide your response into 2 parts/sections. \
+        In the first part/section-  consolidate the latest ideas from you and  also your perspective of the latest conversation in the group and explain to the user \
+        Let the user know who suggested the idea and why. \
+        Summarize the the ideas to the user that the group came up with, explaining each idea as an item of a list. \
+        In the second part/section- give concrete points and suggestions to the user\
+        Note that you should only focus on the latest conversation in the group based on latest input. \
+        Provide a lot of details on each idea, and complement anything missing. \
+        Always format your responses in Markdown format "
     )
     agent_responses = {}
     for agent in world.agents:
