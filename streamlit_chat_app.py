@@ -15,7 +15,7 @@ st.set_page_config(
         "Report a Bug": "https://github.com/sharath-sms/Mental-Wellness-TinyTroupe/issues",
         "About": """Agentic Mental Wellness Assistant 
 
-https://github.com/sharath-sms/retirement-planner-streamlit
+https://github.com/sharath-sms/Mental-Wellness-TinyTroupe
 
 Copyright (c) 2024 Sharath M S
 
