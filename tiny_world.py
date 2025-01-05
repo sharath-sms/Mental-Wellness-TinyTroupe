@@ -71,10 +71,9 @@ def consolidate_tinyworld_ideas(world: TinyWorld) -> dict:
     agent_prompt = (
         "Divide your response into 2 parts/sections. \
         In the first part/section-  consolidate the latest ideas from you and  also your perspective of the latest conversation in the group and explain to the user \
-        Let the user know who suggested the idea and why. \
+        Let the user know who suggested the idea and why. Summarize the the ideas to the user that the group came up with, explaining each idea as an item of a list. \
         In the second part/section- give concrete points and suggestions to the user\
         Have a clear seperation for the above two sections. \
-        Summarize the the ideas to the user that the group came up with, explaining each idea as an item of a list. \
         Note that you should only focus on the latest conversation in the group based on latest input. \
         Provide a lot of details on each idea, and complement anything missing. \
         Always format your responses in Markdown format "
